@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="shortcut icon" href="img/Icon.png">
+<title>SLANGER</title>
+<div class="title"><img src="img/Title.png"></div class="title">
+<div class="from">
+	<input id="token" type="text">
+	<button type="button" id="button_rec_start" class="button" ><img src="img/microphone-on.png" width=64 height=64></button>
+	<button type="button" id="button_rec_stop" disabled=disabled class="button"><img src="img/microphone-off.png" width=64 height=64></button>
+	<button type="button" id="reverse">⇐</button><br>
+	<textarea id="textbox"></textarea><button type="button" id="translate" class="button">Translate</button>
+</div>
+
+<ol id="donelist" reversed>
+</ol>
+<script src="lib/tf.min.js"></script>
+<script src="src/translator.js"></script>
+<script src="src/tts.js"></script>
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="https://cdn.WebRTC-Experiment.com/MediaStreamRecorder.js"></script>
+<script src="src/index.js"></script>

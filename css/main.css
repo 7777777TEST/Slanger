@@ -1,0 +1,51 @@
+*{
+	font-family: 'Noto Sans JP', ;
+	font-size: 32px;
+}
+body{
+	overflow: hidden;
+	background: #fee;
+}
+div.title{
+	text-align:center;
+}
+h1{
+	font-family: 'Segoe Script';
+	font-size: 100px;
+	text-align: center;
+	color: #FFF;
+	background-color: #000;
+}
+button{
+	padding: 0%;
+	border: 0ch;
+	color: #000;
+	background: #FBB;
+}
+button:hover{
+	text-shadow: -6px 0px 15px rgb(255, 255, 255), 6px 0px 15px rgb(255, 255, 255);
+}
+.chatL{
+	margin-right: 30%;
+	background-color: #faceeb;
+	border-radius: 20px;
+	padding: 10px;
+	border:solid;
+	border-color:#FEE
+}
+textarea{
+	width:80%;
+}
+.chatR{
+	left: 10px;
+	margin-left: 30%;
+	background-color: #c5edfe;
+	border-radius: 20px;
+	padding: 10px;
+	border:solid;
+	border-color:#FEE
+}
+div.form{
+	position: absolute;
+	bottom:0px;
+}
