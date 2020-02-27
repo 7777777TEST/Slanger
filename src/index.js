@@ -1,6 +1,6 @@
 "use strict";
 var App = App || {}
-App.baseURL = "http://localhost/slanger/models/"
+App.baseURL = "http://7777777TEST.github.io/slanger/models/"
 App.translator = new App.Translator();
 App.output = "ja"
 App.input = "en"
