@@ -130,11 +130,12 @@
 		}
 	}
 
-	button_rec_start.onclick = event => {
-		const access_token = document.getElementById("token").value;
+	button_rec_start.onclick = event => {	
+		let access_token = document.getElementById("token").value;
 		if (access_token == "") {
-			mylog("ERROR: Specify access token.");
-			throw new Error("Specify access token.");
+			access_token=localStorage.getItem("access_token");
+		}else{
+			localStorage.setItem("access_token", access_token);
 		}
 
 		const c_type_elements = document.getElementsByName("content_type");
