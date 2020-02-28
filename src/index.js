@@ -101,7 +101,7 @@ button_rec_start.onclick = event => {
 	}
 	button_rec_start.disabled = true;
 	button_rec_stop.disabled = false;
-	const url = base_url + "/?process=nict-asr&access-token=" + encodeURIComponent(access_token) + "&input-language=" + encodeURIComponent(App.input) + "&content-type=audio%2Fx-pcm%3Bbit%3D16%3Brate%3D44100%3Bchannels%3D1";
+	const url = base_url + "/?process=nict-asr&access-token=" + encodeURIComponent(access_token) + "&input-language=" + encodeURIComponent(App.input) + "&content-type="+encodeURIComponent("audio/x-pcm;bit=16;rate=44100;channels=1");
 	connect(url);
 };
 button_rec_stop.onclick = event => {
