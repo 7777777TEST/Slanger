@@ -72,7 +72,7 @@ const connect = url => {
 		App.Translate(text);
 	};
 	socket.onerror = event => {
-		console.log("WebSocket message: " + event);
+		mylog("WebSocket message: " + event);
 	};
 	socket.onclose = event => {
 		button_rec_start.disabled = false;
