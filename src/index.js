@@ -34,7 +34,7 @@ App.Translate = (text) => {
 		mylog(text);
 		App.TTS(text, App.output, document.getElementById("token").value)
 	}, e => {
-		mylog(e)
+		mylog("Error")
 	})
 }
 
