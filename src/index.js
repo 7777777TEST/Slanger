@@ -29,7 +29,7 @@ App.Translate = (text) => {
 	var urls = { model: model_url, metadata: meta_url }
 	console.log(urls)
 	App.translator.init(urls).then(e => {
-		console.log("Loaded model")
+		mylog("Loaded model")
 		text = App.translator.translate(text);
 		mylog(text);
 		App.TTS(text, App.output, document.getElementById("token").value)
