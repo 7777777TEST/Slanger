@@ -94,10 +94,11 @@ document.getElementById("reverse").onclick = (e) => {
 	}
 }
 button_rec_start.onclick = event => {
-	const access_token = document.getElementById("token").value;
+	let access_token = document.getElementById("token").value;
 	if (access_token == "") {
-		mylog("ERROR: Specify access token.");
-		throw new Error("Specify access token.");
+		access_token=localStorage.getItem("access_token");
+	}else{
+		localStorage.setItem("access_token", access_token);
 	}
 	button_rec_start.disabled = true;
 	button_rec_stop.disabled = false;
