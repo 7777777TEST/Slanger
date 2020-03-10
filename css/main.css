@@ -33,6 +33,15 @@ button:hover{
 	border:solid;
 	border-color:#FEE
 }
+.chatLS{
+	margin-right: 30%;
+	background-color: #faceeb;
+	border-radius: 20px;
+	padding: 5px;
+	font-size: 20px;
+	border:solid;
+	border-color:#FEE
+}
 textarea{
 	width:80%;
 }
@@ -42,6 +51,16 @@ textarea{
 	background-color: #c5edfe;
 	border-radius: 20px;
 	padding: 10px;
+	border:solid;
+	border-color:#FEE
+}
+.chatRS{
+	left: 10px;
+	margin-left: 30%;
+	background-color: #c5edfe;
+	border-radius: 20px;
+	padding: 5px;
+	font-size: 20px;
 	border:solid;
 	border-color:#FEE
 }

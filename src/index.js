@@ -12,7 +12,7 @@ const button_rec_start = document.getElementById("button_rec_start");
 const button_rec_stop = document.getElementById("button_rec_stop");
 const donelist = document.getElementById("donelist");
 App.speaker = 1;
-const mylog = message => {
+const mylog = (message,small=false) => {
 	const e = document.createElement("div");
 	e.appendChild(document.createTextNode(message));
 	if (App.speaker == 1) {
@@ -20,10 +20,14 @@ const mylog = message => {
 	} else {
 		e.className = "chatL";
 	}
+	if(small){
+		e.className+="S"
+	}
 	donelist.insertBefore(e, donelist.firstChild);
 };
 
 App.Translate = (text) => {
+	mylog(text,true)
 	var model_url = App.baseURL + App.input + "-" + App.output + "/model.json"
 	var meta_url = App.baseURL + App.input + "-" + App.output + "/metadada.json"
 	var urls = { model: model_url, metadata: meta_url }
