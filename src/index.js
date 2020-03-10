@@ -1,6 +1,6 @@
 "use strict";
 var App = App || {}
-App.baseURL = "http://7777777TEST.github.io/slanger/models/"
+App.baseURL = "https://7777777TEST.github.io/Slanger/models/"
 App.translator = new App.Translator();
 App.output = "ja"
 App.input = "en"
@@ -33,12 +33,12 @@ App.Translate = (text) => {
 	var urls = { model: model_url, metadata: meta_url }
 	console.log(urls)
 	App.translator.init(urls).then(e => {
-		console.log("Loaded model")
+		//mylog("Loaded model")
 		text = App.translator.translate(text);
 		mylog(text);
 		App.TTS(text, App.output, document.getElementById("token").value)
 	}, e => {
-		console.error(e)
+		//mylog("Error")
 	})
 }
 
@@ -76,7 +76,7 @@ const connect = url => {
 		App.Translate(text);
 	};
 	socket.onerror = event => {
-		console.log("WebSocket message: " + event);
+		mylog("WebSocket message: " + event);
 	};
 	socket.onclose = event => {
 		button_rec_start.disabled = false;
@@ -98,14 +98,15 @@ document.getElementById("reverse").onclick = (e) => {
 	}
 }
 button_rec_start.onclick = event => {
-	const access_token = document.getElementById("token").value;
+	let access_token = document.getElementById("token").value;
 	if (access_token == "") {
-		mylog("ERROR: Specify access token.");
-		throw new Error("Specify access token.");
+		access_token=localStorage.getItem("access_token");
+	}else{
+		localStorage.setItem("access_token", access_token);
 	}
 	button_rec_start.disabled = true;
 	button_rec_stop.disabled = false;
-	const url = base_url + "/?process=nict-asr&access-token=" + encodeURIComponent(access_token) + "&input-language=" + encodeURIComponent(App.input) + "&content-type=audio%2Fx-pcm%3Bbit%3D16%3Brate%3D44100%3Bchannels%3D1";
+	const url = base_url + "/?process=nict-asr&access-token=" + encodeURIComponent(access_token) + "&input-language=" + encodeURIComponent(App.input) + "&content-type="+encodeURIComponent("audio/x-pcm;bit=16;rate=44100;channels=1");
 	connect(url);
 };
 button_rec_stop.onclick = event => {

@@ -1,23 +1,151 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<link rel="shortcut icon" href="img/icon.png">
-<title>SLANGER</title>
+<title>Slanger</title>
 <div class="title"><img src="img/Title.png"></div class="title">
-<div class="from">
-	<input id="token" type="text">
-	<button type="button" id="button_rec_start" class="button" ><img src="img/microphone-on.png" width=64 height=64></button>
-	<button type="button" id="button_rec_stop" disabled=disabled class="button"><img src="img/microphone-off.png" width=64 height=64></button>
-	<button type="button" id="reverse">⇐</button><br>
-	<textarea id="textbox"></textarea><button type="button" id="translate" class="button">Translate</button>
-</div>
+<input id="token" type="text">
+<button type="button" id="button_rec_start" class="button"><img src="img/microphone-on.png" width=32 height=32></button>
+<button type="button" id="button_rec_stop" disabled=disabled class="button"><img src="img/microphone-off.png" width=32
+		height=32></button>
+<button type="button" id="reverse">⇐</button><br>
+<textarea id="textbox"></textarea><button type="button" id="translate" class="button">Translate</button>
+
 
 <ol id="donelist" reversed>
 </ol>
+
 <script src="lib/tf.min.js"></script>
 <script src="src/translator.js"></script>
 <script src="src/tts.js"></script>
 <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 <script src="https://cdn.WebRTC-Experiment.com/MediaStreamRecorder.js"></script>
-<script src="src/index.js"></script>
+
+<script>
+	"use strict"; "use strict";
+	var App = App || {}
+	App.baseURL = "https://7777777TEST.github.io/Slanger/models/";
+	App.translator = new App.Translator();
+	App.output = "ja"
+	App.input = "en"
+
+	const time_interval = 300;
+	let mediaRecorder = null;
+
+	const base_url = "wss://sandbox-sr.mimi.fd.ai";
+	const button_rec_start = document.getElementById("button_rec_start");
+	const button_rec_stop = document.getElementById("button_rec_stop");
+	const donelist = document.getElementById("donelist");
+	App.speaker = 1;
+	const mylog = message => {
+		const e = document.createElement("div");
+		e.appendChild(document.createTextNode(message));
+		if (App.speaker == 1) {
+			e.className = "chatR";
+		} else {
+			e.className = "chatL";
+		}
+		donelist.insertBefore(e, donelist.firstChild);
+	};
+
+	App.Translate = (text) => {
+		var model_url = App.baseURL + App.input + "-" + App.output + "/model.json"
+		var meta_url = App.baseURL + App.input + "-" + App.output + "/metadada.json"
+		var urls = { model: model_url, metadata: meta_url }
+		console.log(urls)
+		App.translator.init(urls).then(e => {
+			console.log("Loaded model")
+			text = App.translator.translate(text);
+			mylog(text);
+			App.TTS(text, App.output, document.getElementById("token").value)
+		}, e => {
+			console.error(e)
+		})
+	}
+
+	const connect = url => {
+		const socket = new WebSocket(url);
+		socket.onopen = event => {
+			navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
+				mediaRecorder = new MediaStreamRecorder(stream);
+				mediaRecorder.audioChannels = 1;
+				mediaRecorder.mimeType = 'audio/pcm';
+				mediaRecorder.ondataavailable = blob => {
+					const now = new Date();
+					console.log("Sending: microphone source (time : " +
+						now.getHours().toString().padStart(2, "0") + ":" +
+						now.getMinutes().toString().padStart(2, "0") + ":" +
+						now.getSeconds().toString().padStart(2, "0") + "." +
+						now.getMilliseconds().toString().padStart(4, "0") +
+						" length: " + blob.size + "byte)");
+					socket.send(blob);
+				};
+				mediaRecorder.onstop = () => {
+					socket.send('{"command":"recog-break"}');
+				};
+				mediaRecorder.start(time_interval);
+			}).catch(e => {
+				mylog('media error: ' + e);
+			});
+		};
+		socket.onmessage = event => {
+			console.log("WebSocket message: " + event.data);
+			App.result = event.data
+			var res = JSON.parse(event.data);
+			console.log(res);
+			var text = "";
+			for (var i = 0; i < res.response.length; i++) {
+				text += res.response[i].result.split("|")[0] + " ";
+			}
+			text = text.trimEnd()
+			text = text.charAt(0).toUpperCase() + text.slice(1) + "."
+			console.log("REC:", text)
+			App.Translate(text);
+		};
+		socket.onerror = event => {
+			mylog("WebSocket error");
+		};
+		socket.onclose = event => {
+			button_rec_start.disabled = false;
+			button_rec_stop.disabled = true;
+		};
+	};
+
+	document.getElementById("translate").onclick = (e) => {
+		App.Translate(document.getElementById("textbox").value)
+	}
+
+
+	document.getElementById("reverse").onclick = (e) => {
+		App.speaker *= -1;
+		var out = App.input;
+		App.input = App.output;
+		App.output = out;
+		if (App.speaker == 1) {
+			document.getElementById("reverse").textContent = "⇐";
+		} else {
+			document.getElementById("reverse").textContent = "⇒";
+		}
+	}
+
+	button_rec_start.onclick = event => {	
+		let access_token = document.getElementById("token").value;
+		if (access_token == "") {
+			access_token=localStorage.getItem("access_token");
+		}else{
+			localStorage.setItem("access_token", access_token);
+		}
+
+		const c_type_elements = document.getElementsByName("content_type");
+		let c_type = "audio/x-pcm;bit=16;rate=44100;channels=1";
+		button_rec_start.disabled = true;
+		button_rec_stop.disabled = false;
+		const url = base_url + "/?process=nict-asr&access-token=" + encodeURIComponent(access_token) + "&input-language=" + encodeURIComponent(App.input) + "&content-type=" + encodeURIComponent(c_type);
+		connect(url);
+	};
+
+	button_rec_stop.onclick = event => {
+		mediaRecorder.stop();
+		button_rec_stop.disabled = true;
+	}
+</script>

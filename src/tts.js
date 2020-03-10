@@ -30,15 +30,6 @@ App.TTS=async (text,lang,access_token)=>{
 		throw new Error("Input text");
 	}
 
-	if (access_token == "") {
-		var msg=new window.SpeechSynthesisUtterance()
-		msg.volume=1.0
-		msg.rate=1.0
-		msg.text=text
-		window.speechSynthesis.speak(msg)
-		return;
-	}
-
 	let input_lang = lang;
 
 	const context = new window.AudioContext();
