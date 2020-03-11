@@ -4,7 +4,6 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Slanger</title>
 <div class="title"><img src="img/Title.png"></div class="title">
-<input id="token" type="text">
 <button type="button" id="button_rec_start" class="button"><img src="img/microphone-on.png" width=32 height=32></button>
 <button type="button" id="button_rec_stop" disabled=disabled class="button"><img src="img/microphone-off.png" width=32
 		height=32></button>
@@ -22,12 +21,13 @@
 <script src="https://cdn.WebRTC-Experiment.com/MediaStreamRecorder.js"></script>
 
 <script>
-	"use strict"; "use strict";
+	"use strict";
 	var App = App || {}
 	App.baseURL = "https://7777777test.github.io/Slanger/models/";
 	App.translator = new App.Translator();
 	App.output = "ja"
 	App.input = "en"
+	App.access_token=localStorage.getItem("token")
 
 	const time_interval = 300;
 	let mediaRecorder = null;
@@ -61,7 +61,7 @@
 			console.log("Loaded model")
 			text = App.translator.translate(text);
 			mylog(text);
-			App.TTS(text, App.output, document.getElementById("token").value)
+			App.TTS(text, App.output, App.access_token)
 		}, e => {
 			console.error(e)
 		})
@@ -132,19 +132,12 @@
 		}
 	}
 
-	button_rec_start.onclick = event => {	
-		let access_token = document.getElementById("token").value;
-		if (access_token == "") {
-			access_token=localStorage.getItem("access_token");
-		}else{
-			localStorage.setItem("access_token", access_token);
-		}
-
+	button_rec_start.onclick = event => {
 		const c_type_elements = document.getElementsByName("content_type");
 		let c_type = "audio/x-pcm;bit=16;rate=44100;channels=1";
 		button_rec_start.disabled = true;
 		button_rec_stop.disabled = false;
-		const url = base_url + "/?process=nict-asr&access-token=" + encodeURIComponent(access_token) + "&input-language=" + encodeURIComponent(App.input) + "&content-type=" + encodeURIComponent(c_type);
+		const url = base_url + "/?process=nict-asr&access-token=" + encodeURIComponent(App.access_token) + "&input-language=" + encodeURIComponent(App.input) + "&content-type=" + encodeURIComponent(c_type);
 		connect(url);
 	};
 

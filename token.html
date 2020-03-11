@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<script>
+	var textarea=document.createElement("textarea")
+	textarea.addEventListener("input",e=>{
+		localStorage.setItem("token",textarea.value)
+	})
+</script>
