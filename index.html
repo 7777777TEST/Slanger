@@ -3,7 +3,7 @@
 <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <title>Slanger</title>
-<div class="title"><img src="img/Title.png"></div class="title">
+<div class="title"><img src="img/Title.png" width="80%"></div class="title">
 <button type="button" id="button_rec_start" class="button"><img src="img/microphone-on.png" width=32 height=32></button>
 <button type="button" id="button_rec_stop" disabled=disabled class="button"><img src="img/microphone-off.png" width=32
 		height=32></button>
@@ -14,8 +14,9 @@
 <ol id="donelist" reversed>
 </ol>
 
+<script src="lib/segmenter.js"></script>
 <script src="lib/tf.min.js"></script>
-<script src="src/translator.js"></script>
+<script src="src/attention.js"></script>
 <script src="src/tts.js"></script>
 <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 <script src="https://cdn.WebRTC-Experiment.com/MediaStreamRecorder.js"></script>
@@ -23,7 +24,7 @@
 <script>
 	"use strict";
 	var App = App || {}
-	App.baseURL = "https://7777777test.github.io/Slanger/models/";
+	App.baseURL = "http://localhost/slanger/models/";
 	App.translator = new App.Translator();
 	App.output = "ja"
 	App.input = "en"
@@ -54,7 +55,7 @@
 	App.Translate = (text) => {
 		mylog(text,true)
 		var model_url = App.baseURL + App.input + "-" + App.output + "/model.json"
-		var meta_url = App.baseURL + App.input + "-" + App.output + "/metadada.json"
+		var meta_url = App.baseURL + App.input + "-" + App.output + "/metadata.json"
 		var urls = { model: model_url, metadata: meta_url }
 		console.log(urls)
 		App.translator.init(urls).then(e => {
