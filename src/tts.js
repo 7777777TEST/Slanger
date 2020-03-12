@@ -1,14 +1,5 @@
 var App=App||{}
-// App.TTS=(text,lang)=>{
-// 	var msg=new window.SpeechSynthesisUtterance()
-// 	var voices=window.speechSynthesis.getVoices()
-// 	msg.volume=1.0
-// 	msg.rate=1.0
-// 	msg.text=text
-// 	window.speechSynthesis.speak(msg)
-// }
-App.TTS=async (text,lang,access_token)=>{
-
+App.TTS=async (text,input_lang,access_token)=>{
 	async function synthesis(access_token, input_lang, text) {
 		const base_url = "https://sandbox-ss.mimi.fd.ai/speech_synthesis";
 		const form_data = new FormData();
@@ -26,20 +17,15 @@ App.TTS=async (text,lang,access_token)=>{
 		})
 		.then(response => response.arrayBuffer())
 	}
-	if (text.length < 1) {
-		throw new Error("Input text");
-	}
-
-	let input_lang = lang;
-
-	const context = new window.AudioContext();
-	const source = context.createBufferSource();
-
-	await synthesis(access_token, input_lang, text)
-		.then(ab => context.decodeAudioData(ab, buf => {
-			source.buffer = buf;
+	const context=new window.AudioContext();
+	const source=context.createBufferSource();
+	await synthesis(access_token,input_lang,text).then(ab=>{
+		context.decodeAudioData(ab,buf=>{
+			source.buffer=buf;
 			source.connect(context.destination);
 			source.start();
-		}))
-		.catch(error => console.error("synthesis error"));
+		}).catch(e=>{
+			console.error("error:",e);
+		})
+	})
 }

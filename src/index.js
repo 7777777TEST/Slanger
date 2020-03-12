@@ -1,115 +1,52 @@
-"use strict";
-var App = App || {}
-App.baseURL = "https://7777777TEST.github.io/Slanger/models/"
-App.translator = new App.Translator();
-App.output = "ja"
-App.input = "en"
-
-const time_interval = 300;
-let mediaRecorder = null;
-const base_url = "wss://sandbox-sr.mimi.fd.ai";
-const button_rec_start = document.getElementById("button_rec_start");
-const button_rec_stop = document.getElementById("button_rec_stop");
-const donelist = document.getElementById("donelist");
-App.speaker = 1;
-const mylog = (message,small=false) => {
-	const e = document.createElement("div");
-	e.appendChild(document.createTextNode(message));
-	if (App.speaker == 1) {
-		e.className = "chatR";
-	} else {
-		e.className = "chatL";
-	}
-	if(small){
-		e.className+="S"
-	}
-	donelist.insertBefore(e, donelist.firstChild);
-};
-
-App.Translate = (text) => {
-	mylog(text,true)
-	var model_url = App.baseURL + App.input + "-" + App.output + "/model.json"
-	var meta_url = App.baseURL + App.input + "-" + App.output + "/metadada.json"
-	var urls = { model: model_url, metadata: meta_url }
-	console.log(urls)
-	App.translator.init(urls).then(e => {
-		//mylog("Loaded model")
-		text = App.translator.translate(text);
-		mylog(text);
-		App.TTS(text, App.output, document.getElementById("token").value)
-	}, e => {
-		//mylog("Error")
+var App=App||{};
+App.baseURL="http://localhost/slanger/models/"
+App.translator=new App.Translator();
+App.input="eng"
+App.output="jpn"
+App.Trigger=()=>{
+	var urls={model:App.baseURL+App.input+"-"+App.output+"/model.json",metadata:App.baseURL+App.input+"-"+App.output+"/metadada.json"}
+	App.translator.init(urls)
+	App.ASR(input);
+	document.addEventListener("asr-get",e=>{
+		var text=App.translator.translate(e.text)
+		App.TTS(text,output)
+		var talkroom=document.getElementById("talk")
+		var list=document.createElement("li")
+		list.textContent=text
+		talkroom.appendChild(list)
 	})
 }
-
-const connect = url => {
-	const socket = new WebSocket(url);
-	socket.onopen = event => {
-		console.log("WebSocket open.");
-		navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
-			mediaRecorder = new MediaStreamRecorder(stream);
-			mediaRecorder.audioChannels = 1;
-			mediaRecorder.mimeType = 'audio/pcm';
-			mediaRecorder.ondataavailable = blob => {
-				socket.send(blob);
-			};
-			mediaRecorder.onstop = () => {
-				socket.send('{"command":"recog-break"}');
-			};
-			mediaRecorder.start(time_interval);
-		}).catch(e => {
-			console.error('media error: ', e);
-		});
-	};
-	socket.onmessage = event => {
-		console.log("WebSocket message: " + event.data);
-		App.result = event.data
-		var res = JSON.parse(event.data);
-		console.log(res);
-		var text = "";
-		for (var i = 0; i < res.response.length; i++) {
-			text += res.response[i].result.split("|")[0] + " ";
-		}
-		text = text.trimEnd()
-		text = text.charAt(0).toUpperCase() + text.slice(1) + "."
-		console.log("REC:", text)
-		App.Translate(text);
-	};
-	socket.onerror = event => {
-		mylog("WebSocket message: " + event);
-	};
-	socket.onclose = event => {
-		button_rec_start.disabled = false;
-		button_rec_stop.disabled = true;
-	};
-};
-document.getElementById("translate").onclick = (e) => {
-	App.Translate(document.getElementById("textbox").value)
+App.Trigger=(input,output)=>{
+	var urls={model:App.baseURL+App.input+"-"+App.output+"/model.json",metadata:App.baseURL+App.input+"-"+App.output+"/metadada.json"}
+	App.translator.init(urls)
+	App.ASR(input,(text)=>{
+		var text=App.translator.translate(text)
+		var talkroom=document.getElementById("talk")
+		var list=document.createElement("li")
+		list.textContent=text
+		talkroom.appendChild(list)
+		App.TTS(text,output)
+	});
 }
-document.getElementById("reverse").onclick = (e) => {
-	App.speaker *= -1;
-	var out = App.input;
-	App.input = App.output;
-	App.output = out;
-	if (App.speaker == 1) {
-		document.getElementById("reverse").textContent = "⇐";
-	} else {
-		document.getElementById("reverse").textContent = "⇒";
-	}
+App.Translate=()=>{
+	var model_url=App.baseURL+App.input+"-"+App.output+"/model.json"
+	var meta_url=App.baseURL+App.input+"-"+App.output+"/metadada.json"
+	var urls={model:model_url,metadata:meta_url}
+	console.log(urls)
+	App.translator.init(urls).then(e=>{
+		console.log("Loaded model")
+		var textbox=document.getElementById("textbox");
+		var text=App.translator.translate(textbox.value);
+		var result=document.getElementById("result");
+		console.log(text)
+		result.value=text;
+	},e=>{
+		console.error(e)
+	})
 }
-button_rec_start.onclick = event => {
-	let access_token = document.getElementById("token").value;
-	if (access_token == "") {
-		access_token=localStorage.getItem("access_token");
-	}else{
-		localStorage.setItem("access_token", access_token);
-	}
-	button_rec_start.disabled = true;
-	button_rec_stop.disabled = false;
-	const url = base_url + "/?process=nict-asr&access-token=" + encodeURIComponent(access_token) + "&input-language=" + encodeURIComponent(App.input) + "&content-type="+encodeURIComponent("audio/x-pcm;bit=16;rate=44100;channels=1");
-	connect(url);
-};
-button_rec_stop.onclick = event => {
-	mediaRecorder.stop();
-	button_rec_stop.disabled = true;
-}
+document.getElementById("translate").addEventListener("mousedown|touchend",App.Translate)
+document.getElementById("reverse").addEventListener("mousedown|touchend",e=>{
+	var input=App.output;
+	App.output=App.input;
+	App.input=input;
+})
