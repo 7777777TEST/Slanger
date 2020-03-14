@@ -45,6 +45,7 @@ button:hover{
 	padding: 5px;
 	border:solid;
 	border-color:#FEE
+	font-size: 60px;
 }
 textarea{
 	width:80%;
@@ -66,7 +67,6 @@ textarea{
 	padding: 5px;
 	border:solid;
 	border-color:#FEE;
-	font-size: 60px;
 }
 div.form{
 	position: absolute;
