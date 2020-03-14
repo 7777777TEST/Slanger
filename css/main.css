@@ -16,6 +16,9 @@ h1{
 	color: #FFF;
 	background-color: #000;
 }
+button.button{
+	font-size: 64px;
+}
 button{
 	padding: 0%;
 	padding: 0%;
@@ -32,7 +35,8 @@ button:hover{
 	border-radius: 20px;
 	padding: 10px;
 	border:solid;
-	border-color:#FEE
+	border-color:#FEE;
+	font-size: 60px;
 }
 .chatRS{
 	margin-right: 30%;
@@ -61,7 +65,8 @@ textarea{
 	border-radius: 20px;
 	padding: 5px;
 	border:solid;
-	border-color:#FEE
+	border-color:#FEE;
+	font-size: 60px;
 }
 div.form{
 	position: absolute;
