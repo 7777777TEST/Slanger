@@ -1,6 +1,6 @@
 *{
 	font-family: 'Noto Sans JP', ;
-	font-size: 32px;
+	font-size: 48px;
 }
 body{
 	overflow: hidden;
@@ -39,7 +39,6 @@ button:hover{
 	background-color: #faceeb;
 	border-radius: 20px;
 	padding: 5px;
-	font-size: 20px;
 	border:solid;
 	border-color:#FEE
 }
@@ -61,7 +60,6 @@ textarea{
 	background-color: #c5edfe;
 	border-radius: 20px;
 	padding: 5px;
-	font-size: 20px;
 	border:solid;
 	border-color:#FEE
 }
