@@ -1,20 +1,102 @@
+I wanna study abroad.	私は留学がしてぇ。
+ASAP	なるはや
+lol	（笑）
+lol	笑
+haha	w
+It's funny lol.	それ面白いね(笑)
+It's funny haha.	それ面白いねw
+It's funny lol	それ面白いね(笑)
+It's funny haha	それ面白いねw
+It's funny.	それ面白いね
+It's funny	それ面白いね
+This temple is very temple	このお寺はまじ卍
+very temple	まじ卍
 K.	了解。
-Hi.	よっす。
-I'll BBL.	ちょっと風呂入ってくるわ。
+K.	わかった。
+K.	OK。
+4 u	あなたへ。
+I'll BBL.	また後で戻るよ。
+BFN	またねー
+TTYL	またねー
+TTYS	またねー
+TT4N	またね
+BFN!	またね!
+TTYL!	またね!
+TTYS!	またね!
+TT4N	またね!
+TTTT	ぶっちゃけ言うと
+GB	バイバイ
+Gotta Go	行かなくちゃ！
+Gotcha	了解
+Gz	おめでとう
+Grats	おめでとう
+Gratz	おめでとう
+HRU	元気？
+HRY	元気？
+OIC	なるほど。
+DUR	覚えてる？
 I'm hungry AF.	超腹減った。
 This anime is my fav.	このアニメはお気に入り。
+This anime is my fav lol.	このアニメはお気に入り ( 笑 )
+This anime is my fav haha.	このアニメはお気に入りw
 Hey guise!	オッス！
-Just lmk if I can help you out.	なんかできることあれば言ってね。
+Hey guys!	やぁ、みんな！
+Awesome!	イケてる！
+rox!	イケてる！
+It's a piece of cake!	朝飯前だよ！
+It's a piece of cake	余裕だよ
+We are BFF!	私たちはズッ友だよ！
+We're BFF!	私たちはズッ友だよ！
+Hit me up later.	後で連絡して。
+Just LMK if I can Halp u out.	なんかできることあれば言ってね。
 It was very interesting lol.	それはとても面白かった（笑）
-That was very interesting lol.	それはとても面白かった（笑）
 I'm glad if u can return as soon as possible.	なるはやで返してもらえると嬉しい。
+I am glad if u can return asap.	なるはやで返してもらえると嬉しい。
+I'm glad if u can return asap.	なるはやで返してもらえると嬉しい。
 I wanna watch the movie w/ u.	あなたと一緒に映画を観たい。
+I wanna watch the movie.	映画を観たい。
 I wanna go shopping w/ u.	あなたと一緒に買い物いきたい。
+I wanna go shopping.	買い物いきたい。
 I wanna eat french fries.	フライドポテトを食べたい。
+No way	信じられない。
+No way.	信じられない。
 No way!	信じられない。
-No way.	まさか。
-Thx.	ありがとう。
-K.	了解。
+thx.	ありがとう。
+thnx.	ありがとう。
+tx.	ありがとう。
+(y)	グッ！
+YW	どういたしまして。
+ZOMG	なんてことだ...
+AMA	何でも聞いて！
+AMAA	何でも聞いて！
+AYT	いる？
+C'mon!	来て！
+C'mon,it's okay.	大丈夫、心配ないよ。
+GM	おはよー
+GN	おやすみ
+GN8	おやすみ
+Halp	助けて...
+Halp lol	助けて(笑)
+halp	助けて...
+halp haha	助けてw
+IC	なる ほど
+IC	了解
+LCTC	ひさしぶり
+LTNS	ひさしぶり
+LTNT	ひさしぶり
+nope	やだ
+nope	No
+yup	いい よ
+Nope	やだ
+Nope	No
+Yup	いい よ
+NP	問題ないよー
+OMG	まじか
+soz	ごめん
+Soz	ごめん
+sry	ごめん
+Come w/ me.	私と来て。
+Come w/ me.	私について来て。
 Look closer.	よく見て。
 Make a wish.	願い事をして。
 Many thanks.	本当にありがとう。
@@ -24,7 +106,7 @@ Just be cool.	まあ冷静になれよ。
 Just do that.	とにかくやれよ。
 Just go away.	とにかく失せろ。
 Just go home.	とにかく家に帰りなさい。
-Just help me.	ちょっと手伝って。
+Just Halp me.	ちょっと手伝って。
 Just say yes.	うんと言ってよ。
 Just shut up.	いいから黙って。
 Just stop it.	とにかくやめろよ。
@@ -71,90 +153,9 @@ May I cut in?	お話し中すみません。
 Men cry, too.	男だって泣くことくらいあるさ。
 Move quietly.	そーっと動かしてね。
 My arm hurts.	腕が痛む。
-Hi.	よっす。
-I'll BBL.	ちょっと風呂入ってくるわ。
-I'm hungry AF.	超腹減った。
-This anime is my fav.	このアニメはお気に入り。
-Hey guise!	オッス！
-Just lmk if I can help you out.	なんかできることあれば言ってね。
-It was very interesting lol.	それはとても面白かった（笑）
-That was very interesting lol.	それはとても面白かった（笑）
-I'm glad if u can return as soon as possible.	なるはやで返してもらえると嬉しい。
-I wanna watch the movie w/ u.	あなたと一緒に映画を観たい。
-I wanna go shopping w/ u.	あなたと一緒に買い物いきたい。
-I wanna eat french fries.	フライドポテトを食べたい。
-No way!	信じられない。
-No way.	まさか。
-Thx.	ありがとう。
-K.	了解。
-Hi.	よっす。
-I'll BBL.	ちょっと風呂入ってくるわ。
-I'm hungry AF.	超腹減った。
-This anime is my fav.	このアニメはお気に入り。
-Hey guise!	オッス！
-Just lmk if I can help you out.	なんかできることあれば言ってね。
-It was very interesting lol.	それはとても面白かった（笑）
-That was very interesting lol.	それはとても面白かった（笑）
-I'm glad if u can return as soon as possible.	なるはやで返してもらえると嬉しい。
-I wanna watch the movie w/ u.	あなたと一緒に映画を観たい。
-I wanna go shopping w/ u.	あなたと一緒に買い物いきたい。
-I wanna eat french fries.	フライドポテトを食べたい。
-No way!	信じられない。
-No way.	まさか。
-Thx.	ありがとう。
-K.	了解。
-Hi.	よっす。
-I'll BBL.	ちょっと風呂入ってくるわ。
-I'm hungry AF.	超腹減った。
-This anime is my fav.	このアニメはお気に入り。
-Hey guise!	オッス！
-Just lmk if I can help you out.	なんかできることあれば言ってね。
-It was very interesting lol.	それはとても面白かった（笑）
-That was very interesting lol.	それはとても面白かった（笑）
-I'm glad if u can return as soon as possible.	なるはやで返してもらえると嬉しい。
-I wanna watch the movie w/ u.	あなたと一緒に映画を観たい。
-I wanna go shopping w/ u.	あなたと一緒に買い物いきたい。
-I wanna eat french fries.	フライドポテトを食べたい。
-No way!	信じられない。
-No way.	まさか。
-Thx.	ありがとう。
-K.	了解。
-Hi.	よっす。
-I'll BBL.	ちょっと風呂入ってくるわ。
-I'm hungry AF.	超腹減った。
-This anime is my fav.	このアニメはお気に入り。
-Hey guise!	オッス！
-Just lmk if I can help you out.	なんかできることあれば言ってね。
-It was very interesting lol.	それはとても面白かった（笑）
-That was very interesting lol.	それはとても面白かった（笑）
-I'm glad if u can return as soon as possible.	なるはやで返してもらえると嬉しい。
-I wanna watch the movie w/ u.	あなたと一緒に映画を観たい。
-I wanna go shopping w/ u.	あなたと一緒に買い物いきたい。
-I wanna eat french fries.	フライドポテトを食べたい。
-No way!	信じられない。
-No way.	まさか。
-Thx.	ありがとう。
-K.	了解。
-Hi.	よっす。
-I'll BBL.	ちょっと風呂入ってくるわ。
-I'm hungry AF.	超腹減った。
-This anime is my fav.	このアニメはお気に入り。
-Hey guise!	オッス！
-Just lmk if I can help you out.	なんかできることあれば言ってね。
-It was very interesting lol.	それはとても面白かった（笑）
-That was very interesting lol.	それはとても面白かった（笑）
-I'm glad if u can return as soon as possible.	なるはやで返してもらえると嬉しい。
-I wanna watch the movie w/ u.	あなたと一緒に映画を観たい。
-I wanna go shopping w/ u.	あなたと一緒に買い物いきたい。
-I wanna eat french fries.	フライドポテトを食べたい。
-No way!	信じられない。
-No way.	まさか。
-Thx.	ありがとう。
 Go.	行け。
 Go.	行きなさい。
-Hi.	こんにちは。
 Hi.	やっほー。
-Hi.	こんにちは！
 Run.	走れ。
 Run.	走って！
 Who?	誰？
@@ -164,7 +165,7 @@ Wow!	わぉ！
 Fire!	火事だ！
 Fire!	火事！
 Fire!	撃て！
-Help!	助けて！
+Halp!	助けて！
 Jump!	飛び越えろ！
 Jump!	跳べ！
 Jump!	飛び降りろ！
@@ -184,13 +185,13 @@ Hello!	こんにちは。
 Hello!	もしもし。
 Hello!	こんにちは！
 Hurry!	急げ！
-I see.	なるほど。
-I see.	なるほどね。
-I see.	わかった。
-I see.	わかりました。
-I see.	そうですか。
-I see.	そうなんだ。
-I see.	そっか。
+IC.	なるほど。
+IC.	なるほどね。
+IC.	わかった。
+IC.	わかりました。
+IC.	そうですか。
+IC.	そうなんだ。
+IC.	そっか。
 I try.	頑張ってみる。
 I try.	やってみる。
 I try.	試してみる。
@@ -235,7 +236,7 @@ I lost.	負けた・・・。
 I paid.	払いました。
 I quit.	私、辞めます。
 I quit.	やめた。
-I'm 19.	１９歳です。
+I'm 19.	19歳です。
 I'm OK.	大丈夫ですよ。
 I'm OK.	私は大丈夫です。
 I'm up.	起きてるよ。
@@ -244,14 +245,9 @@ Listen.	聞いて！
 No way!	馬鹿な！
 No way!	あり得ねぇー。
 No way!	とんでもない！
-No way!	とんでもございません！
-No way!	とんでもありません！
 Really?	本当？
 Really?	本当に？
 Really?	本気？
-Thx.	ありがとうございます！
-Thx.	お疲れさまでした。
-Thx.	ありがとう。
 We try.	私たちは努力しております。
 We won.	俺らの勝ちー！
 We won.	勝ったぞ！
@@ -260,7 +256,6 @@ Why me?	どうして私なの？
 Ask Tom.	トムに聞きなさい。
 Ask Tom.	トムに聞いて。
 Ask Tom.	トムに聞いてごらん。
-Awesome!	すごいぞ！
 Be calm.	落ち着いて。
 Be cool.	落ち着いて。
 Be cool.	冷静に。
@@ -305,14 +300,13 @@ Hang on.	切らないで。
 He came.	彼は来ました。
 He quit.	やめた。
 He runs.	彼は走る。
-Help me!	助けてくれ。
-Help me!	助けて！
-Help me.	助けてくれ。
-Help me.	助けて！
-Help me.	手伝ってよ。
-Help me.	助けてください。
-Help me.	手伝って。
-Help us.	手伝って。
+Halp me!	助けてくれ。
+Halp me!	助けて！
+Halp me.	助けてくれ。
+Halp me.	助けて！
+Halp me.	手伝ってよ。
+Halp me.	手伝って。
+Halp us.	手伝って。
 Hi, Tom.	ハーイ、トム。
 Hi, Tom.	やぁ、トム。
 Hit Tom.	トムを殴れ。
@@ -437,7 +431,7 @@ Grab Tom.	トムを捕まえろ。
 Have fun.	楽しんでね。
 Have fun.	楽しんできなさい。
 He tries.	彼がやってみるんだ。
-Help Tom.	トムを助けてやって。
+Halp Tom.	トムを助けてやって。
 How cute!	なんて可愛いんでしょう。
 How cute!	かわいい！
 How deep?	どのくらい深い？
@@ -640,9 +634,9 @@ I was mad.	私は怒り狂っていたんだ。
 I will go.	行くよ。
 I will go.	私が行きます。
 I'd agree.	私は同意するだろう。
-I'll help.	お手伝いしますよ。
-I'll help.	私は手伝うよ。
-I'll help.	手伝うよ。
+I'll Halp.	お手伝いしますよ。
+I'll Halp.	私は手伝うよ。
+I'll Halp.	手伝うよ。
 I'm a boy.	僕、男だよ。
 I'm a cop.	私は警官だ。
 I'm alone.	一人だ。
@@ -755,9 +749,6 @@ Take care.	気をつけて！
 Take mine.	私のをどうぞ。
 Take this.	これ使って。
 Take this.	これにしなよ。
-Thank you.	ありがとうございます！
-Thank you.	お疲れさまでした。
-Thank you.	ありがとう。
 That's OK.	それでいいよ。
 That's it.	図星です。
 That's it.	そういうこと。
@@ -804,9 +795,9 @@ Am I clear?	私の言ってること、わかります？
 Am I fired?	俺、クビですか？
 Am I right?	私、正しい？
 Am I wrong?	俺は間違っているのか。
-Are you OK?	大丈夫ですか？
-Are you OK?	大丈夫？
-Are you in?	いる?
+Are u OK?	大丈夫ですか？
+Are u OK?	大丈夫？
+Are u in?	いる?
 Be careful!	気をつけて！
 Be careful.	用心しなさい。
 Be careful.	気を付けてね。
@@ -814,14 +805,13 @@ Be careful.	気をつけて！
 Be on time.	時間に遅れないで。
 Be patient.	辛抱しなさい。
 Be serious.	ふざけないで。
-Be serious.	真面目におやり。
 Birds sing.	鳥は歌います。
 Birds sing.	鳥が囀る。
 Birds sing.	鳥は鳴く。
 Bottoms up!	乾杯！
 Can I come?	私も行ってもいい？
-Can I help?	手伝おうか。
-Can I help?	手伝おうか？
+Can I Halp?	手伝おうか。
+Can I Halp?	手伝おうか？
 Carry this.	これ運んで。
 Choose one.	一つ選んで。
 Come again.	また来てね。
@@ -846,7 +836,7 @@ Did Tom go?	トムは行った？
 Did we win?	勝った？
 Do come in.	さあどうぞお入りください。
 Do come in.	入って。
-Do you ski?	スキーは滑る？
+Do u ski?	スキーは滑る？
 Don't come.	来ないで。
 Don't look.	見ないで。
 Don't move!	動かないで！
@@ -894,9 +884,9 @@ He's lying.	彼は嘘をついている。
 He's smart.	利口だね。
 He's smart.	彼は頭がいい。
 Heat it up.	温めて。
-Help me up.	上がるの手伝って。
-Help me up.	起き上がるの手伝って。
-Help me up.	立ち上がるの手伝って。
+Halp me up.	上がるの手伝って。
+Halp me up.	起き上がるの手伝って。
+Halp me up.	立ち上がるの手伝って。
 Here he is!	あっ、来た来た。
 Here it is.	はいどうぞ。
 Here it is.	ほら、ここにあるよ。
@@ -1078,7 +1068,7 @@ Look at me.	私を見て。
 Never mind!	心配するな。
 Never mind!	気にするな。
 Never mind!	何でもない。
-No problem!	問題ないよ。
+NP!	問題ないよ。
 No problem!	大丈夫ですよ。
 No problem.	問題ないよ。
 No problem.	大丈夫ですよ。
@@ -1152,9 +1142,9 @@ All is well.	万事よろしい。
 Am I hungry!	ああ、お腹が空いた。
 Anyone hurt?	誰かケガした？
 Anyone hurt?	誰か怪我した？
-Are you mad?	怒ってるの?
-Are you sad?	悲しいですか。
-Are you sad?	悲しいの？
+Are u mad?	怒ってるの?
+Are u sad?	悲しいですか。
+Are u sad?	悲しいの？
 Ask anybody.	誰にでもいいから訊いてみてください。
 Be punctual.	遅れるなよ。
 Be punctual.	時間に遅れないで。
@@ -1168,14 +1158,14 @@ Count on me.	任せて。
 Did Tom die?	トムは死んだ？
 Did Tom try?	トムは試したの？
 Did Tom win?	トムは勝った？
-Did you win?	勝った？
+Did u win?	勝った？
 Do as I say.	言うとおりにして。
 Do it again!	もう一度おやり。
 Do it again.	もう一度やって。
 Do it later.	後でやって。
 Do it right.	ちゃんとやって。
-Do you care?	それが問題？
-Do you fish?	釣りはしますか？
+Do u care?	それが問題？
+Do u fish?	釣りはしますか？
 Don't cheat.	ズルをするなよ。
 Don't shoot!	撃たないで！
 Don't shoot.	撃たないで！
@@ -1193,7 +1183,7 @@ Get in here!	こっちに入って！
 Get serious.	冗談はやめて。
 Get to work!	仕事にかかれ！
 Go find Tom.	トムを探してきて。
-Go help Tom.	トムを手伝ってきて。
+Go Halp Tom.	トムを手伝ってきて。
 Go straight.	まっすぐ行け。
 Go to sleep.	眠りなさい。
 Go to sleep.	もう寝なさい。
@@ -1224,9 +1214,7 @@ Here I come.	いま、行きます。
 Here we are!	さあ着いたぞ。
 Here we are.	はい、着きました。
 Here we are.	着きましたよ。
-How are you?	元気ですか。
 How are you?	元気？
-How are you?	ご機嫌いかが？
 How strange!	変だなあ。
 I also went.	私も行った。
 I am a twin.	私は双子です。
@@ -1264,7 +1252,7 @@ I love math.	私は数学が大好きです。
 I love rock.	私はロックが好きです。
 I made this.	僕はこれを作った。
 I messed up.	失敗した。
-I need help.	助けてください。
+I need Halp.	助けてください。
 I overslept.	寝過ごしちゃった。
 I saw a UFO.	私はＵＦＯを見ました。
 I saw a dog.	犬を見かけました。
@@ -1283,7 +1271,7 @@ I was tired.	私は疲れていた。
 I was wrong.	私が間違っていました。
 I was wrong.	私が間違ってました。
 I went, too.	私も行った。
-I will help.	お手伝いしますよ。
+I will Halp.	お手伝いしますよ。
 I won't cry.	泣くもんか。
 I won't die.	死ぬもんか。
 I won't lie.	嘘などつくもんか。
@@ -1396,7 +1384,7 @@ Jump across.	飛び越えろ！
 Just get up.	とにかく起きろ。
 Just try it.	まあ試してごらんよ。
 Let Tom try.	トムにやらせてあげて。
-Let me help.	手伝わせて。
+Let me Halp.	手伝わせて。
 Let me know.	私に知らせて。
 Let me know.	ご一報ください。
 Let's begin.	さぁ始めましょう。
@@ -1422,7 +1410,7 @@ Just be cool.	まあ冷静になれよ。
 Just do that.	とにかくやれよ。
 Just go away.	とにかく失せろ。
 Just go home.	とにかく家に帰りなさい。
-Just help me.	ちょっと手伝って。
+Just Halp me.	ちょっと手伝って。
 Just say yes.	うんと言ってよ。
 Just shut up.	いいから黙って。
 Just stop it.	とにかくやめろよ。
