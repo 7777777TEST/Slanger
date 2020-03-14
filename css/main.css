@@ -18,9 +18,12 @@ h1{
 }
 button{
 	padding: 0%;
+	padding: 0%;
 	border: 0ch;
 	color: #000;
 	background: #FBB;
+	width: 64px;
+	height: 64px;
 }
 button:hover{
 	text-shadow: -6px 0px 15px rgb(255, 255, 255), 6px 0px 15px rgb(255, 255, 255);
