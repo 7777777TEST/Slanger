@@ -116,7 +116,9 @@
 	};
 
 	document.getElementById("translate").onclick = (e) => {
-		App.Translate(document.getElementById("textbox").value)
+		const text=document.getElementById("textbox").value;
+		document.getElementById("textbox").value=""
+		App.Translate(text)
 	}
 
 
