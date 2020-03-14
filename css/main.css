@@ -1,6 +1,6 @@
 *{
 	font-family: 'Noto Sans JP', ;
-	font-size: 32px;
+	font-size: 48px;
 }
 body{
 	overflow: hidden;
@@ -16,7 +16,11 @@ h1{
 	color: #FFF;
 	background-color: #000;
 }
+button.button{
+	font-size: 64px;
+}
 button{
+	padding: 0%;
 	padding: 0%;
 	border: 0ch;
 	color: #000;
@@ -31,16 +35,17 @@ button:hover{
 	border-radius: 20px;
 	padding: 10px;
 	border:solid;
-	border-color:#FEE
+	border-color:#FEE;
+	font-size: 60px;
 }
 .chatRS{
 	margin-right: 30%;
 	background-color: #faceeb;
 	border-radius: 20px;
 	padding: 5px;
-	font-size: 20px;
 	border:solid;
-	border-color:#FEE
+	border-color:#FEE;
+	font-size: 60px;
 }
 textarea{
 	width:80%;
@@ -60,9 +65,8 @@ textarea{
 	background-color: #c5edfe;
 	border-radius: 20px;
 	padding: 5px;
-	font-size: 20px;
 	border:solid;
-	border-color:#FEE
+	border-color:#FEE;
 }
 div.form{
 	position: absolute;
