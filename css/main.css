@@ -44,7 +44,7 @@ button:hover{
 	border-radius: 20px;
 	padding: 5px;
 	border:solid;
-	border-color:#FEE
+	border-color:#FEE;
 	font-size: 60px;
 }
 textarea{
